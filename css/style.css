@@ -22,8 +22,8 @@
 .final-four-matches {
 	position: relative;
 	margin: 0 auto 15px auto;
-	width: 800px;
-	height: 80px;
+	width: 880px;
+	height: 120px;
 }
 
 .national-champion {
@@ -53,11 +53,13 @@ ul {
 }
 
 .slot {
-	width: 98px;
+	width: 143px;
 	height: 33px;
 	border: 1px solid black;
 	line-height: 33px;
 	background: white;
+	text-align: left;
+	direction: ltr;
 }
 
 .slot1 {
@@ -75,16 +77,16 @@ ul {
 }
 
 .final-four .slot {
-	width: 158px;
-	height: 38px;
-	line-height: 38px;
+	width: 238px;
+	height: 58px;
+	line-height: 58px;
 }
 
 .feature-slot {
-	width: 198px;
-	height: 48px;
+	width: 248px;
+	height: 73px;
 	border: 1px solid black;
-	line-height: 48px;
+	line-height: 73px;
 	font-weight: bold;
 	background: white;
 	-webkit-border-radius: 20px;
@@ -116,6 +118,10 @@ ul {
 
 .right-side {
 	margin: 0 0 0 -50px;
+}
+
+.right-format {
+	direction: rtl;
 }
 
 .center {
@@ -150,6 +156,7 @@ ul {
 	border: solid black;
 	width: inherit;
 	z-index: -1;
+	position: relative; /* Make z-indexing work */
 }
 
 .top-right {
@@ -186,22 +193,29 @@ ul {
 
 .seed {
 	font-family: "Lucida Console", Monaco, monospace;
-	font-size: 13px;
+	font-size: 18px;
 	margin-left: 4px;
 }
 
 .name {
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 12px;
+	font-size: 18px;
 }
 
 .final-four .seed, .final-four .name {
-	font-size: 20px;
-	margin-left: 0;
+	font-size: 24px;
+}
+
+.final-four .seed {
+	margin-left: 6px;
+}
+
+.final-four .name {
+	margin-left: 4px;
 }
 
 .feature-slot .seed, .feature-slot .name {
-	font-size: 24px;
+	font-size: 28px;
 	margin-left: 0;
 }
 

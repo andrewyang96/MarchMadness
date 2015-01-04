@@ -1,7 +1,7 @@
 1,Virginia
 16,Coast Car.
 8,Memphis
-9,G. Washington
+9,G Washington
 5,Cincinnati
 12,Harvard
 4,Mich. State
