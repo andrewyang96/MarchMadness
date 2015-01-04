@@ -42,6 +42,8 @@ ul {
 	width: 100px;
 	float: left;
 	list-style-type: none;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 .final-four .round {
@@ -52,9 +54,9 @@ ul {
 
 .slot {
 	width: 98px;
-	height: 23px;
+	height: 33px;
 	border: 1px solid black;
-	line-height: 23px;
+	line-height: 33px;
 	background: white;
 }
 
@@ -62,12 +64,14 @@ ul {
 	-webkit-border-radius: 10px 10px 0 0;
 	-moz-border-radius: 10px 10px 0 0;
 	border-radius: 10px 10px 0 0;
+	margin-top: -10px;
 }
 
 .slot2 {
 	-webkit-border-radius: 0 0 10px 10px;
 	-moz-border-radius: 10 0 10px 10px;
 	border-radius: 0 0 10px 10px;
+	margin-bottom: -10px;
 }
 
 .final-four .slot {
@@ -136,6 +140,10 @@ ul {
 	visibility: hidden;
 	width: inherit;
 	height: 25px;
+}
+
+.empty-slot:first-child {
+	margin-top: 10px;
 }
 
 .line {
