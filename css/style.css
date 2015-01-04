@@ -26,9 +26,35 @@
 	height: 120px;
 }
 
+.first-four {
+	margin-bottom: 25px;
+	height: 150px;
+	text-align: center;
+}
+
+.first-four-matches {
+	position: relative;
+	margin: 0 auto 15px auto;
+	width: 1050px;
+	height: 100px;
+	margin-top: 20px;
+}
+
 .national-champion {
 	font-size: 36px;
 	font-family: Verdana, Geneva, sans-serif;
+}
+
+.first-four-text {
+	font-size: 24px;
+	font-family: Verdana, Geneva, sans-serif;
+}
+
+.playin-caption {
+	font-size: 16px;
+	font-family: Verdana, Geneva, sans-serif;
+	margin-bottom: 15px;
+	font-weight: bold;
 }
 
 /* Slot CSS */
@@ -38,12 +64,19 @@ ul {
 	margin: 0;
 }
 
-.round {
-	width: 100px;
+.round, .f4-round {
 	float: left;
 	list-style-type: none;
+}
+
+.round {
+	width: 100px;
 	padding-top: 10px;
 	padding-bottom: 10px;
+}
+
+.f4-round {
+	width: 150px;
 }
 
 .final-four .round {
