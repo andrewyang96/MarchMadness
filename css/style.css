@@ -142,7 +142,7 @@ ul {
 	height: 25px;
 }
 
-.empty-slot:first-child {
+.divider > .empty-slot:first-child, .divider > .empty-double-slot:first-child {
 	margin-top: 10px;
 }
 
