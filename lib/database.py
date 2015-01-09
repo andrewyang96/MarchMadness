@@ -1,32 +1,9 @@
-#!/usr/bin/env python
-
-# COMMENT OUT BELOW WHEN DONE DEBUGGING
-##import sys
-##sys.stderr = sys.stdout
-# COMMENT OUT ABOVE WHEN DONE DEBUGGING
-
-print "Content-type: text/html"
-print
-
 from lib.bracket import *
 from lib.teams import getTeams
-import os, lxml.html, MySQLdb
-import cgi, cgitb; cgitb.enable()
+import os
+import lxml.html
+import MySQLdb
 
-args = cgi.FieldStorage()
-
-##import cProfile, sys
-##class Logger(object):
-##    def __init__(self):
-##        self.terminal = sys.stdout
-##        self.log = open("logfile.log", "a")
-##
-##    def write(self, message):
-##        self.terminal.write(message)
-##        self.log.write(message)
-##sys.stdout = Logger()
-
-# page.cssselect() method is slowest
 
 def connect():
     return MySQLdb.connect(host="engr-cpanel-mysql.engr.illinois.edu",
@@ -34,12 +11,13 @@ def connect():
                            passwd="roflcopter1",
                            db="ayang14_marchmadness")
 
+
 def insert(timestamp, uniqueID, binary):
     db = connect()
     cur = db.cursor()
     command = ("INSERT INTO ayang14_marchmadness.Bracket "
-    "(timestamp, id, bitstring) "
-    "VALUES (\"{}\",\"{}\",{})".format(timestamp, uniqueID, binary))
+               "(timestamp, id, bitstring) "
+               "VALUES (\"{}\",\"{}\",{})".format(timestamp, uniqueID, binary))
     try:
         cur.execute(command)
         db.commit()
@@ -49,6 +27,7 @@ def insert(timestamp, uniqueID, binary):
     finally:
         db.close()
         cur.close()
+
 
 def select(uniqueID):
     # returns tuple: (timestamp, binary)
@@ -61,6 +40,7 @@ def select(uniqueID):
     db.close()
     cur.close()
     return rows[0]
+
 
 def isValidID(ID):
     # Valid IDs are:
@@ -76,20 +56,19 @@ def isValidID(ID):
     else:
         return False
 
-def generate(bitstring=None, timestamp=None):
+
+def generate(uniqueID=None):
     # returns an HTML string
 
-    if (bitstring is None) != (timestamp is None):
-        return "Something went wrong in generate(). Contact ayang14@illinois.edu"
-    else:
-        mustGenerateNewBracket = bitstring is None
-    
+    mustGenerateNewBracket = uniqueID is None
     b = Bracket(getTeams())
+    if not mustGenerateNewBracket:
+        timestamp, bitstring = select(uniqueID)
+    else:
+        bitstring = None
     determineWinners(b, bitstring)
 
-    path = os.path.dirname(os.path.realpath(__file__)) + "/"
-
-    f = open(path+"template/bracket.html")
+    f = open("./templates/bracket.html")
     page = lxml.html.fromstring(f.read())
     f.close()
 
@@ -106,7 +85,6 @@ def generate(bitstring=None, timestamp=None):
             matchnum += 1
             if team is match.getValue():
                 el.attrib["class"] += " winner"
-            
 
             # child2
             el = page.cssselect("#{0}r{1}".format(matchnum, rndnum))[0]
@@ -116,7 +94,6 @@ def generate(bitstring=None, timestamp=None):
             matchnum += 1
             if team is match.getValue():
                 el.attrib["class"] += " winner"
-            
         rndnum += 1
 
     champion = page.cssselect("#champion")[0]
@@ -126,7 +103,7 @@ def generate(bitstring=None, timestamp=None):
     # generate debug info
     if mustGenerateNewBracket:
         timestamp = getTimestamp()
-        bitstring = bin(b.getBitRepresentation())[2:] # eliminate leading 0b
+        bitstring = bin(b.getBitRepresentation())[2:]  # eliminate leading 0b
         success = False
         while not success:
             try:
@@ -134,35 +111,16 @@ def generate(bitstring=None, timestamp=None):
                 insert(timestamp, uniqueID, bitstring)
                 success = True
             except MySQLdb.Error as e:
-                if e[0] != 1062: # error code 1062: duplicate ID
+                if e[0] != 1062:  # error code 1062: duplicate ID
                     raise e
-    else: # avoid infinite loop
-        uniqueID = args["id"].value
 
     # modify debug DOM
     debug = page.cssselect(".debug")[0]
     debug.cssselect("#time")[0].text = "This bracket was generated on {} UTC".format(timestamp)
     if mustGenerateNewBracket:
-        debug.cssselect("#link")[0].cssselect("a")[0].set("href","generate.py?id={}".format(uniqueID))
+        debug.cssselect("#link")[0].cssselect("a")[0].set("href", "/bracket/{}".format(uniqueID))
         debug.cssselect("#link")[0].cssselect("a")[0].text = "Permalink to generated bracket"
     else:
-        debug.cssselect("#link")[0].cssselect("a")[0].set("href","generate.py")
+        debug.cssselect("#link")[0].cssselect("a")[0].set("href", "/bracket")
         debug.cssselect("#link")[0].cssselect("a")[0].text = "Generate another bracket"
-    
     return lxml.html.tostring(page, pretty_print=True)
-
-def render():
-    if ("id" in args.keys()) and isValidID(args["id"].value):
-        if isValidID(args["id"].value):
-            row = select(args["id"].value)
-            bitstring = int(row[1])
-            timestamp = row[0].__str__()
-            print generate(bitstring, timestamp)
-        else:
-            print "Something went wrong"
-    else:
-        print generate()
-
-
-# cProfile.run("render()")
-render()
