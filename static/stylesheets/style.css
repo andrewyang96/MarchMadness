@@ -1,275 +1,292 @@
-/* Bracket container CSS */
-
-.bracket-container {
-	width: 1500px;
-	position: relative;
-	margin-left: auto;
-	margin-right: auto;
-	overflow: auto;
+body
+{
+	background-image:url('/static/images/background.jpg');
+	background-repeat:repeat;
+	background-color:#d7d7d7;	
+	background-size: 100% 100%;
 }
 
-.bracket-half {
-	height: 750px;
+#bgNav{
+	background-image:url('/static/images/bg2.png');
+	background-repeat:repeat;
+	margin: 0px auto 0px auto;
+	padding: 50px 0 50px 0;
+	background-size: contain;
 }
 
-.final-four {
-	margin-top: 25px;
-	margin-bottom: 25px;
-	height: 200px;
-	text-align: center;
+.sidebar {
+    width: 120px;
+    float:left;
 }
 
-.final-four-matches {
-	position: relative;
-	margin: 0 auto 15px auto;
-	width: 880px;
-	height: 120px;
+table
+{
+	border-collapse:collapse;
+}
+th
+{
+	border: 1px solid black;
+	vertical-align:bottom;
+	text-align:center;
+	padding:5px;
+	background-color:#333;
+	color: white;
+	
+}
+table,td
+{
+	border: 1px solid black;
+	vertical-align:bottom;
+	text-align:center;
+	padding:5px;
+}
+#freqArea{	
+	text-align:center;
+	font-size:1.3em;
+	letter-spacing:0px;
+	font-family:Arial, Helvetica, sans-serif;
+	line-height:1.4em;
+	color:#333;	
+}
+.conditional{
+	text-align:center;
+	font-size:.8em;
+	letter-spacing:0px;
+	font-family:Arial, Helvetica, sans-serif;
+	line-height:1.4em;
+	color:#333;	
+}
+#probArea{	
+	text-align:center;
+	font-size:1.3em;
+	letter-spacing:0px;
+	font-family:Arial, Helvetica, sans-serif;
+	line-height:1.4em;
+	color:#333;	
 }
 
-.first-four {
-	margin-bottom: 25px;
-	height: 150px;
-	text-align: center;
+.results{	
+	padding-top:15px;
+	text-align:center;
+	font-size:1.71em;
+	letter-spacing:0px;
+	font-family:Arial, Helvetica, sans-serif;
+	line-height:1.4em;
+	color:#333;	
 }
 
-.first-four-matches {
-	position: relative;
-	margin: 0 auto 15px auto;
-	width: 1050px;
-	height: 100px;
-	margin-top: 20px;
+h1{
+	text-shadow: 0px 1px 1px #fff;
+	font-size:2.70em;
+	letter-spacing:-2px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	color:#333;
+	line-height:1.2em;
+	margin:0px 0 35px 0;	
 }
 
-.national-champion {
-	font-size: 36px;
-	font-family: Verdana, Geneva, sans-serif;
+h2{
+	/*border-bottom:1px solid grey;*/
+	text-shadow: 0px 1px 1px #fff;
+	padding-top:20px;
+	margin-bottom: 5px;
+	text-align:left;
+	font-size:2.2em;
+	letter-spacing:0px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bolder;
+	color:#333;
+}
+h3{
+	
+	padding-top:20px;
+	text-align:center;
+	font-size:1.8em;
+	letter-spacing:-1px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	color:#333;	
+	text-shadow: 0px 1px 1px #fff;
+}
+h4{
+	/*border-bottom:1px solid grey;*/
+	text-shadow: 0px 1px 3px #fff;
+	padding-top:10px;
+	margin-top:-3px;
+	margin-bottom: 5px;
+	text-align:left;
+	font-size:1.6em;
+	letter-spacing:-1px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	color:#333;	
+}
+select{
+	width:70px
+	height: 70px;
+	font-size:16px;
+	
+	font-family:Arial, Helvetica, sans-serif;
 }
 
-.first-four-text {
-	font-size: 24px;
-	font-family: Verdana, Geneva, sans-serif;
+p{
+	line-height:1.4em;
 }
 
-.playin-caption {
+p.final4_button a {
+color: #000000;
+text-decoration: none;
+display: block;
+width: 292px;
+height: 73px;
+background-image: url(final4.png);
+background-repeat: no-repeat;
+} 
+ 
+p.final4_button a:hover, p.final4_button a:active {
+display:block;
+background-image: url(final4_down.png);
+background-repeat: no-repeat;
+}
+
+p.elite8_button a {
+color: #000000;
+text-decoration: none;
+display: block;
+width: 292px;
+height: 73px;
+background-image: url(elite8.png);
+background-repeat: no-repeat;
+} 
+ 
+p.elite8_button a:hover, p.elite8_button a:active {
+display:block;
+background-image: url(elite8_down.png);
+background-repeat: no-repeat;
+}
+
+p.championship_button a {
+color: #000000;
+text-decoration: none;
+display: block;
+width: 292px;
+height: 73px;
+background-image: url(championship.png);
+background-repeat: no-repeat;
+} 
+ 
+p.championship_button a:hover, p.championship_button a:active {
+display:block;
+background-image: url(championship_down.png);
+background-repeat: no-repeat;
+}
+
+p.champion_button a {
+color: #000000;
+text-decoration: none;
+display: block;
+width: 292px;
+height: 73px;
+background-image: url(champion.png);
+background-repeat: no-repeat;
+} 
+ 
+p.champion_button a:hover, p.champion_button a:active {
+display:block;
+background-image: url(champion_down.png);
+background-repeat: no-repeat;
+}
+
+p.home_button a {
+color: #000000;
+text-decoration: none;
+display: block;
+width: 292px;
+height: 73px;
+background-image: url(home.png);
+background-repeat: no-repeat;
+} 
+ 
+p.home_button a:hover, p.home_button a:active {
+display:block;
+background-image: url(home_down.png);
+background-repeat: no-repeat;
+}
+p.update_button a {
+color: #000000;
+text-decoration: none;
+display: block;
+width: 292px;
+height: 73px;
+background-image: url(update.png);
+background-repeat: no-repeat;
+} 
+ 
+p.update_button a:hover, p.home_button a:active {
+display:block;
+background-image: url(update_down.png);
+background-repeat: no-repeat;
+}
+
+#box-table-a
+{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
 	font-size: 16px;
-	font-family: Verdana, Geneva, sans-serif;
-	margin-bottom: 15px;
-	font-weight: bold;
-}
-
-/* Slot CSS */
-
-ul {
-	padding: 0;
-	margin: 0;
-}
-
-.round, .f4-round {
-	float: left;
-	list-style-type: none;
-}
-
-.round {
-	width: 100px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-}
-
-.f4-round {
-	width: 150px;
-}
-
-.final-four .round {
-	width: 160px;
-	float: left;
-	list-style-type: none;
-}
-
-.slot {
-	width: 143px;
-	height: 33px;
-	border: 1px solid black;
-	line-height: 33px;
-	background: white;
+	font-weight:bold;
+	margin: 45px;
+	width: 550px;
 	text-align: left;
-	direction: ltr;
+	border-collapse: collapse;
+	border-left:3px solid #333;
+	border-right:3px solid #333;
+	border-bottom:3px solid #333;
 }
-
-.slot1 {
-	-webkit-border-radius: 10px 10px 0 0;
-	-moz-border-radius: 10px 10px 0 0;
-	border-radius: 10px 10px 0 0;
-	margin-top: -10px;
-}
-
-.slot2 {
-	-webkit-border-radius: 0 0 10px 10px;
-	-moz-border-radius: 10 0 10px 10px;
-	border-radius: 0 0 10px 10px;
-	margin-bottom: -10px;
-}
-
-.final-four .slot {
-	width: 238px;
-	height: 58px;
-	line-height: 58px;
-}
-
-.feature-slot {
-	width: 248px;
-	height: 73px;
-	border: 1px solid black;
-	line-height: 73px;
-	font-weight: bold;
-	background: white;
-	-webkit-border-radius: 20px;
-	-moz-border-radius: 20px;
-	border-radius: 20px;
-	margin: 15px auto 0 auto;
-}
-
-/* Spacing CSS */
-
-.divider {
-	width: 150px;
-	height: inherit;
-	top: 0;
-	float: left;
-	z-index: -1;
-}
-
-.final-four .divider {
-	width: 160px;
-	height: inherit;
-	top: 0;
-	float: left;
-}
-
-.left-side {
-	margin: 0 -50px 0 0;
-}
-
-.right-side {
-	margin: 0 0 0 -50px;
-}
-
-.right-format {
-	direction: rtl;
-}
-
-.center {
-	width: 100px;
-}
-
-.empty-double-slot {
-	visibility: hidden;
-	width: inherit;
-	height: 50px;
-	line-height: 50px;
-}
-
-.region-name {
-	visibility: visible;
-	text-align: center;
-	font-size: 32px;
-	font-family: Verdana, Geneva, sans-serif;
-}
-
-.empty-slot {
-	visibility: hidden;
-	width: inherit;
-	height: 25px;
-}
-
-.divider > .empty-slot:first-child, .divider > .empty-double-slot:first-child {
-	margin-top: 10px;
-}
-
-.line {
-	border: solid black;
-	width: inherit;
-	z-index: -1;
-	position: relative; /* Make z-indexing work */
-}
-
-.top-right {
-	height: 24px;
-	border-width: 1px 1px 0 0;
-}
-
-.bottom-right {
-	height: 24px;
-	border-width: 0 1px 1px 0;
-}
-
-.right {
-	height: 50px;
-	border-width: 0 1px 0 0;
-}
-
-.top-left {
-	height: 24px;
-	border-width: 1px 0 0 1px;
-}
-
-.bottom-left {
-	height: 24px;
-	border-width: 0 0 1px 1px;
-}
-
-.left {
-	height: 50px;
-	border-width: 0 0 0 1px;
-}
-
-/* Slot text decoration CSS */
-
-.seed {
-	font-family: "Lucida Console", Monaco, monospace;
-	font-size: 18px;
-	margin-left: 4px;
-}
-
-.name {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 18px;
-}
-
-.final-four .seed, .final-four .name {
-	font-size: 24px;
-}
-
-.final-four .seed {
-	margin-left: 6px;
-}
-
-.final-four .name {
-	margin-left: 4px;
-}
-
-.feature-slot .seed, .feature-slot .name {
-	font-size: 28px;
-	margin-left: 0;
-}
-
-.winner {
-	font-weight: bold;
-}
-
-/*
-.loser {
+#teamLost
+{
+	color:grey;
 	text-decoration: line-through;
+	
+	font-size:13px;
 }
+#box-table-a th
+{
+	font-size: 15px;
+	font-weight: normal;
+	padding: 8px;
+	background: #333;
+	border-top: 4px solid #black;
+	border-left:0px;
+	border-right:0px;
+	border-bottom: 1px solid #fff;
+	color: white;
+}
+#box-table-a td
+{
+	padding: 8px;
+	border-bottom: 1px solid #grey;
+	border-top:0px;
+	border-left:0px;
+	border-right:0px;
+	color: black;
+	border-top: 1px solid transparent;
+}
+#box-table-a tr:hover td
+{
+	background: #CCC;
+	color: #black;
+}
+/*
+Table source: http://www.smashingmagazine.com/2008/08/13/top-10-css-table-designs/
 */
-
-/* Debug CSS */
-
-.debug {
-	font-family: "Lucida Console", Monaco, monospace;
-	font-size: 12px;
-	text-align: center;
+div#preloaded-images {
+   position: absolute;
+   overflow: hidden;
+   left: -9999px; 
+   top: -9999px;
+   height: 1px;
+   width: 1px;
 }
-
-.debug .p {
-	margin: 0;
-}
+/*
+Image preloading: http://perishablepress.com/press/2007/07/22/css-throwdown-preload-images-without-javascript/
+*/
