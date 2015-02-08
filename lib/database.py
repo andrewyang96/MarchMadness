@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 from lib.bracket import *
 from lib.teams import getTeams
 import os

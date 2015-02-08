@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 from flask import Flask, render_template, render_template_string, flash
 import datetime
