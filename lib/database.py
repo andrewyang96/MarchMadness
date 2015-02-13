@@ -122,7 +122,9 @@ def generate(uniqueID=None):
     if mustGenerateNewBracket:
         debug.cssselect("#link")[0].cssselect("a")[0].set("href", "/bracket/{}".format(uniqueID))
         debug.cssselect("#link")[0].cssselect("a")[0].text = "Permalink to generated bracket"
+        page.cssselect("#refreshmessage")[0].cssselect("a")[0].text = "Refresh this page for another bracket."
     else:
         debug.cssselect("#link")[0].cssselect("a")[0].set("href", "/bracket")
         debug.cssselect("#link")[0].cssselect("a")[0].text = "Generate another bracket"
+        page.cssselect("#refreshmessage")[0].cssselect("a")[0].text = "Click here for another bracket."
     return lxml.html.tostring(page, pretty_print=True)

@@ -1,3 +1,16 @@
+#heresyourbracket {
+	text-align: center;
+	font-size: 60px;
+	font-weight: bold;
+	margin-top: -90px;
+}
+
+#refreshmessage {
+	text-align: center;
+	font-size: 32px;
+	margin-bottom: 64px;
+}
+
 /* Bracket container CSS */
 
 .bracket-container {
@@ -15,15 +28,27 @@
 .final-four {
 	margin-top: 25px;
 	margin-bottom: 25px;
-	height: 200px;
+	height: 500px;
 	text-align: center;
 }
 
 .final-four-matches {
 	position: relative;
-	margin: 0 auto 15px auto;
-	width: 880px;
+	margin: 15px auto 15px auto;
+	width: 510px;
+	height: 100px;
+}
+
+.championship-game {
+	text-align: center;
 	height: 120px;
+	width: 240px;
+	position: relative;
+	margin: 15px auto 15px auto;
+}
+
+.championship-game li {
+	text-align: center;
 }
 
 .first-four {
@@ -38,6 +63,11 @@
 	width: 1050px;
 	height: 100px;
 	margin-top: 20px;
+}
+
+.finals-message {
+	font-size: 32px;
+	font-family: Verdana, Geneva, sans-serif;
 }
 
 .national-champion {
@@ -109,7 +139,13 @@ ul {
 	margin-bottom: -10px;
 }
 
-.final-four .slot {
+.final-four-matches .slot {
+	width: 198px;
+	height: 48px;
+	line-height: 48px;
+}
+
+.championship-game .slot {
 	width: 238px;
 	height: 58px;
 	line-height: 58px;
@@ -139,7 +175,7 @@ ul {
 }
 
 .final-four .divider {
-	width: 160px;
+	width: 150px;
 	height: inherit;
 	top: 0;
 	float: left;
