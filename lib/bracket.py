@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+from alpha import getAlphaFile
 from itertools import izip
 import random, time, datetime, binascii, os
 
@@ -163,7 +164,15 @@ def winProb(team1, team2, rndnum):
     return 1.0 * seed2**a / (seed1**a + seed2**a)
 
 def alpha(team1, team2, rndnum):
-    return 1 # TODO: replace with actual function
+    alphas = getAlphaFile(rndnum)
+    try:
+        minSeed, maxSeed = sorted([int(team1.getSeed()), int(team2.getSeed())])
+        a = alphas[(minSeed, maxSeed)]
+        # print "Found alpha for {0}, {1}. It's {2}".format(minSeed, maxSeed, a)
+        return a
+    except KeyError:
+        # print "Cannot find an alpha value for {0}, {1}".format(minSeed, maxSeed)
+        return 1
 
 # RUN THROUGH BRACKET
 def determineWinners(bracket, bitstring=None):

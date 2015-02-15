@@ -31,5 +31,5 @@ def generate_bracket(id):
 	return render_template_string(generate(id))
 
 if __name__ == "__main__":
-    app.debug = False
+    app.debug = True
     app.run()
