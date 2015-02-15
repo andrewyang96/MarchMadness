@@ -6,6 +6,7 @@ from team import Team
 # in each dict: the key is seed, and the value is the Team object
 import os
 path = os.path.dirname(os.path.realpath(__file__)) + "/"
+# order may change
 files = [path+"data/data_south.txt",
          path+"data/data_east.txt",
          path+"data/data_midwest.txt",

@@ -102,6 +102,11 @@ def generate(uniqueID=None):
     champion.cssselect(".seed")[0].text = match.getValue().getSeed()
     champion.cssselect(".name")[0].text = match.getValue().getName()
 
+    page.cssselect("#first-region")[0].text = "SOUTH" # top-left
+    page.cssselect("#second-region")[0].text = "EAST" # bottom-left
+    page.cssselect("#third-region")[0].text = "MIDWEST" # bottom-right
+    page.cssselect("#fourth-region")[0].text = "WEST" # top-right
+
     # generate debug info
     if mustGenerateNewBracket:
         timestamp = getTimestamp()
