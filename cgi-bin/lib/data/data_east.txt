@@ -1,0 +1,16 @@
+1,Virginia
+16,Coast Car.
+8,Memphis
+9,G Washington
+5,Cincinnati
+12,Harvard
+4,Mich. State
+13,Delaware
+6,N Carolina
+11,Providence
+3,Iowa State
+14,NC Central
+7,Connecticut
+10,St. Joseph's
+2,Villanova
+15,Milwaukee

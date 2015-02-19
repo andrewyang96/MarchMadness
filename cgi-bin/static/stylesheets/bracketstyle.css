@@ -1,0 +1,321 @@
+#heresyourbracket {
+	text-align: center;
+	font-size: 60px;
+	font-weight: bold;
+	margin-top: -90px;
+}
+
+#refreshmessage {
+	text-align: center;
+	font-size: 32px;
+	margin-bottom: 64px;
+}
+
+/* Bracket container CSS */
+
+.bracket-container {
+	width: 1500px;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: auto;
+}
+
+.bracket-half {
+	height: 750px;
+}
+
+.final-four {
+	margin-top: 25px;
+	margin-bottom: 25px;
+	height: 500px;
+	text-align: center;
+}
+
+.final-four-matches {
+	position: relative;
+	margin: 15px auto 15px auto;
+	width: 510px;
+	height: 100px;
+}
+
+.championship-game {
+	text-align: center;
+	height: 120px;
+	width: 240px;
+	position: relative;
+	margin: 15px auto 15px auto;
+}
+
+.championship-game li {
+	text-align: center;
+}
+
+.first-four {
+	margin-bottom: 25px;
+	height: 150px;
+	text-align: center;
+}
+
+.first-four-matches {
+	position: relative;
+	margin: 0 auto 15px auto;
+	width: 1050px;
+	height: 100px;
+	margin-top: 20px;
+}
+
+.finals-message {
+	font-size: 32px;
+	font-family: Verdana, Geneva, sans-serif;
+}
+
+.national-champion {
+	font-size: 36px;
+	font-family: Verdana, Geneva, sans-serif;
+}
+
+.first-four-text {
+	font-size: 24px;
+	font-family: Verdana, Geneva, sans-serif;
+}
+
+.playin-caption {
+	font-size: 16px;
+	font-family: Verdana, Geneva, sans-serif;
+	margin-bottom: 15px;
+	font-weight: bold;
+}
+
+/* Slot CSS */
+
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+.round, .f4-round {
+	float: left;
+	list-style-type: none;
+}
+
+.round {
+	width: 100px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.f4-round {
+	width: 150px;
+}
+
+.final-four .round {
+	width: 160px;
+	float: left;
+	list-style-type: none;
+}
+
+.slot {
+	width: 143px;
+	height: 33px;
+	border: 1px solid black;
+	line-height: 33px;
+	background: rgba(255,255,255,0.7);
+	text-align: left;
+	direction: ltr;
+}
+
+.slot1 {
+	-webkit-border-radius: 10px 10px 0 0;
+	-moz-border-radius: 10px 10px 0 0;
+	border-radius: 10px 10px 0 0;
+	margin-top: -10px;
+}
+
+.slot2 {
+	-webkit-border-radius: 0 0 10px 10px;
+	-moz-border-radius: 10 0 10px 10px;
+	border-radius: 0 0 10px 10px;
+	margin-bottom: -10px;
+}
+
+.final-four-matches .slot {
+	width: 198px;
+	height: 48px;
+	line-height: 48px;
+}
+
+.championship-game .slot {
+	width: 238px;
+	height: 58px;
+	line-height: 58px;
+}
+
+.feature-slot {
+	width: 248px;
+	height: 73px;
+	border: 1px solid black;
+	line-height: 73px;
+	font-weight: bold;
+	background: white;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	margin: 15px auto 0 auto;
+}
+
+/* Spacing CSS */
+
+.divider {
+	width: 150px;
+	height: inherit;
+	top: 0;
+	float: left;
+	z-index: -1;
+}
+
+.final-four .divider {
+	width: 150px;
+	height: inherit;
+	top: 0;
+	float: left;
+}
+
+.left-side {
+	margin: 0 -50px 0 0;
+}
+
+.right-side {
+	margin: 0 0 0 -50px;
+}
+
+.right-format {
+	direction: rtl;
+}
+
+.center {
+	width: 100px;
+}
+
+.empty-double-slot {
+	visibility: hidden;
+	width: inherit;
+	height: 50px;
+	line-height: 50px;
+}
+
+.region-name {
+	visibility: visible;
+	text-align: center;
+	font-size: 32px;
+	font-family: Verdana, Geneva, sans-serif;
+}
+
+.empty-slot {
+	visibility: hidden;
+	width: inherit;
+	height: 25px;
+}
+
+.divider > .empty-slot:first-child, .divider > .empty-double-slot:first-child {
+	margin-top: 10px;
+}
+
+.line {
+	border: solid black;
+	width: inherit;
+	z-index: -1;
+	position: relative; /* Make z-indexing work */
+}
+
+.top-right {
+	height: 24px;
+	border-width: 1px 1px 0 0;
+}
+
+.bottom-right {
+	height: 24px;
+	border-width: 0 1px 1px 0;
+}
+
+.right {
+	height: 50px;
+	border-width: 0 1px 0 0;
+}
+
+.top-left {
+	height: 24px;
+	border-width: 1px 0 0 1px;
+}
+
+.bottom-left {
+	height: 24px;
+	border-width: 0 0 1px 1px;
+}
+
+.left {
+	height: 50px;
+	border-width: 0 0 0 1px;
+}
+
+/* Slot text decoration CSS */
+
+.seed {
+	font-family: "Lucida Console", Monaco, monospace;
+	font-size: 18px;
+	margin-left: 4px;
+}
+
+.name {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+}
+
+.final-four .seed, .final-four .name {
+	font-size: 24px;
+}
+
+.final-four .seed {
+	margin-left: 6px;
+}
+
+.final-four .name {
+	margin-left: 4px;
+}
+
+.feature-slot .seed, .feature-slot .name {
+	font-size: 28px;
+	margin-left: 0;
+}
+
+.winner {
+	font-weight: bold;
+}
+
+/*
+.loser {
+	text-decoration: line-through;
+}
+*/
+
+/* Debug CSS */
+
+.debug {
+	font-family: "Lucida Console", Monaco, monospace;
+	font-size: 12px;
+	text-align: center;
+}
+
+.debug .p {
+	margin: 0;
+}
+
+/* Browser specific */
+
+@-moz-document url-prefix() { /* Firefox */
+	
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { /* IE 10+ */
+    
+}

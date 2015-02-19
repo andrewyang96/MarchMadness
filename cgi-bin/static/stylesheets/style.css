@@ -1,0 +1,292 @@
+body
+{
+	background-image:url('/static/images/background.jpg');
+	background-repeat:repeat;
+	background-color:#d7d7d7;	
+	background-size: 100% 100%;
+}
+
+#bgNav{
+	background-image:url('/static/images/bg2.png');
+	background-repeat:repeat;
+	margin: 0px auto 0px auto;
+	padding: 50px 0 50px 0;
+	background-size: contain;
+}
+
+.sidebar {
+    width: 120px;
+    float:left;
+}
+
+table
+{
+	border-collapse:collapse;
+}
+th
+{
+	border: 1px solid black;
+	vertical-align:bottom;
+	text-align:center;
+	padding:5px;
+	background-color:#333;
+	color: white;
+	
+}
+table,td
+{
+	border: 1px solid black;
+	vertical-align:bottom;
+	text-align:center;
+	padding:5px;
+}
+#freqArea{	
+	text-align:center;
+	font-size:1.3em;
+	letter-spacing:0px;
+	font-family:Arial, Helvetica, sans-serif;
+	line-height:1.4em;
+	color:#333;	
+}
+.conditional{
+	text-align:center;
+	font-size:.8em;
+	letter-spacing:0px;
+	font-family:Arial, Helvetica, sans-serif;
+	line-height:1.4em;
+	color:#333;	
+}
+#probArea{	
+	text-align:center;
+	font-size:1.3em;
+	letter-spacing:0px;
+	font-family:Arial, Helvetica, sans-serif;
+	line-height:1.4em;
+	color:#333;	
+}
+
+.results{	
+	padding-top:15px;
+	text-align:center;
+	font-size:1.71em;
+	letter-spacing:0px;
+	font-family:Arial, Helvetica, sans-serif;
+	line-height:1.4em;
+	color:#333;	
+}
+
+h1{
+	text-shadow: 0px 1px 1px #fff;
+	font-size:2.70em;
+	letter-spacing:-2px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	color:#333;
+	line-height:1.2em;
+	margin:0px 0 35px 0;	
+}
+
+h2{
+	/*border-bottom:1px solid grey;*/
+	text-shadow: 0px 1px 1px #fff;
+	padding-top:20px;
+	margin-bottom: 5px;
+	text-align:left;
+	font-size:2.2em;
+	letter-spacing:0px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bolder;
+	color:#333;
+}
+h3{
+	
+	padding-top:20px;
+	text-align:center;
+	font-size:1.8em;
+	letter-spacing:-1px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	color:#333;	
+	text-shadow: 0px 1px 1px #fff;
+}
+h4{
+	/*border-bottom:1px solid grey;*/
+	text-shadow: 0px 1px 3px #fff;
+	padding-top:10px;
+	margin-top:-3px;
+	margin-bottom: 5px;
+	text-align:left;
+	font-size:1.6em;
+	letter-spacing:-1px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	color:#333;	
+}
+select{
+	width:70px
+	height: 70px;
+	font-size:16px;
+	
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+p{
+	line-height:1.4em;
+}
+
+p.final4_button a {
+color: #000000;
+text-decoration: none;
+display: block;
+width: 292px;
+height: 73px;
+background-image: url(final4.png);
+background-repeat: no-repeat;
+} 
+ 
+p.final4_button a:hover, p.final4_button a:active {
+display:block;
+background-image: url(final4_down.png);
+background-repeat: no-repeat;
+}
+
+p.elite8_button a {
+color: #000000;
+text-decoration: none;
+display: block;
+width: 292px;
+height: 73px;
+background-image: url(elite8.png);
+background-repeat: no-repeat;
+} 
+ 
+p.elite8_button a:hover, p.elite8_button a:active {
+display:block;
+background-image: url(elite8_down.png);
+background-repeat: no-repeat;
+}
+
+p.championship_button a {
+color: #000000;
+text-decoration: none;
+display: block;
+width: 292px;
+height: 73px;
+background-image: url(championship.png);
+background-repeat: no-repeat;
+} 
+ 
+p.championship_button a:hover, p.championship_button a:active {
+display:block;
+background-image: url(championship_down.png);
+background-repeat: no-repeat;
+}
+
+p.champion_button a {
+color: #000000;
+text-decoration: none;
+display: block;
+width: 292px;
+height: 73px;
+background-image: url(champion.png);
+background-repeat: no-repeat;
+} 
+ 
+p.champion_button a:hover, p.champion_button a:active {
+display:block;
+background-image: url(champion_down.png);
+background-repeat: no-repeat;
+}
+
+p.home_button a {
+color: #000000;
+text-decoration: none;
+display: block;
+width: 292px;
+height: 73px;
+background-image: url(home.png);
+background-repeat: no-repeat;
+} 
+ 
+p.home_button a:hover, p.home_button a:active {
+display:block;
+background-image: url(home_down.png);
+background-repeat: no-repeat;
+}
+p.update_button a {
+color: #000000;
+text-decoration: none;
+display: block;
+width: 292px;
+height: 73px;
+background-image: url(update.png);
+background-repeat: no-repeat;
+} 
+ 
+p.update_button a:hover, p.home_button a:active {
+display:block;
+background-image: url(update_down.png);
+background-repeat: no-repeat;
+}
+
+#box-table-a
+{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 16px;
+	font-weight:bold;
+	margin: 45px;
+	width: 550px;
+	text-align: left;
+	border-collapse: collapse;
+	border-left:3px solid #333;
+	border-right:3px solid #333;
+	border-bottom:3px solid #333;
+}
+#teamLost
+{
+	color:grey;
+	text-decoration: line-through;
+	
+	font-size:13px;
+}
+#box-table-a th
+{
+	font-size: 15px;
+	font-weight: normal;
+	padding: 8px;
+	background: #333;
+	border-top: 4px solid #black;
+	border-left:0px;
+	border-right:0px;
+	border-bottom: 1px solid #fff;
+	color: white;
+}
+#box-table-a td
+{
+	padding: 8px;
+	border-bottom: 1px solid #grey;
+	border-top:0px;
+	border-left:0px;
+	border-right:0px;
+	color: black;
+	border-top: 1px solid transparent;
+}
+#box-table-a tr:hover td
+{
+	background: #CCC;
+	color: #black;
+}
+/*
+Table source: http://www.smashingmagazine.com/2008/08/13/top-10-css-table-designs/
+*/
+div#preloaded-images {
+   position: absolute;
+   overflow: hidden;
+   left: -9999px; 
+   top: -9999px;
+   height: 1px;
+   width: 1px;
+}
+/*
+Image preloading: http://perishablepress.com/press/2007/07/22/css-throwdown-preload-images-without-javascript/
+*/

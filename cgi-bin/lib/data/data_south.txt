@@ -1,0 +1,16 @@
+1,Florida
+16,Albany
+8,Colorado
+9,Pittsburgh
+5,VCU
+12,SF Austin
+4,UCLA
+13,Tulsa
+6,Ohio State
+11,Dayton
+3,Syracuse
+14,W Michigan
+7,New Mexico
+10,Stanford
+2,Kansas
+15,E Kentucky
