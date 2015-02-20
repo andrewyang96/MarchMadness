@@ -20,7 +20,7 @@ def insert(timestamp, uniqueID, binary):
     cur = db.cursor()
     command = ("INSERT INTO ayang14_marchmadness.Bracket "
                "(timestamp, id, bitstring) "
-               "VALUES (\"{}\",\"{}\",{})".format(timestamp, uniqueID, binary))
+               "VALUES (\"{0}\",\"{1}\",{2})".format(timestamp, uniqueID, binary))
     try:
         cur.execute(command)
         db.commit()
@@ -37,7 +37,7 @@ def select(uniqueID):
     db = connect()
     cur = db.cursor()
     command = ("SELECT timestamp, bitstring FROM ayang14_marchmadness.Bracket "
-               "WHERE id=\"{}\"".format(uniqueID))
+               "WHERE id=\"{0}\"".format(uniqueID))
     cur.execute(command)
     rows = cur.fetchall()
     db.close()
@@ -124,9 +124,9 @@ def generate(uniqueID=None):
 
     # modify debug DOM
     debug = page.cssselect(".debug")[0]
-    debug.cssselect("#time")[0].text = "This bracket was generated on {} UTC".format(timestamp)
+    debug.cssselect("#time")[0].text = "This bracket was generated on {0} UTC".format(timestamp)
     if mustGenerateNewBracket:
-        debug.cssselect("#link")[0].cssselect("a")[0].set("href", "/bracket/{}".format(uniqueID))
+        debug.cssselect("#link")[0].cssselect("a")[0].set("href", "/cgi-bin/bracket.py?id={0}".format(uniqueID))
         debug.cssselect("#link")[0].cssselect("a")[0].text = "Permalink to generated bracket"
         page.cssselect("#refreshmessage")[0].cssselect("a")[0].text = "Refresh this page for another bracket."
     else:
