@@ -14,3 +14,14 @@ def getAlphaFile(rndnum):
             l[0], l[1] = int(l[0]), int(l[1])
             alphas[tuple(l[:-1])] = l[-1]
     return alphas
+
+def getDefaultAlphas():
+    defaults = {}
+    with open(path + "data/alpha_defaults.txt", "r") as data:
+        for line in data:
+            line = line.strip()
+            l = line.split(",")
+            l[:] = [float(s) for s in l]
+            l[0] = int(l[0])
+            defaults[l[0]) = l[1]
+    return defaults

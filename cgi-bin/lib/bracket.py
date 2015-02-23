@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: UTF-8 -*-
 
-from alpha import getAlphaFile
+from alpha import getAlphaFile, getDefaultAlphas
 from itertools import izip
 import random, time, datetime, binascii, os
 
@@ -166,14 +166,19 @@ def winProb(team1, team2, rndnum):
 
 def alpha(team1, team2, rndnum):
     alphas = getAlphaFile(rndnum)
+    defaults = getDefaultAlphas()
     try:
         minSeed, maxSeed = sorted([int(team1.getSeed()), int(team2.getSeed())])
         a = alphas[(minSeed, maxSeed)]
-        # print "Found alpha for {0}, {1}. It's {2}".format(minSeed, maxSeed, a)
+        print "Found alpha for {0}, {1}. It's {2}".format(minSeed, maxSeed, a)
         return a
-    except KeyError:
-        # print "Cannot find an alpha value for {0}, {1}".format(minSeed, maxSeed)
-        return 1
+    except KeyError:        
+        try:
+            print "Using default alpha for round {0}".format(rndnum)
+            return defaults[rndnum]
+        except KeyError:
+            print "Cannot find an alpha or default value for {0}, {1} in round {2}".format(minSeed, maxSeed, rndnum)
+            return 1
 
 # RUN THROUGH BRACKET
 def determineWinners(bracket, bitstring=None):
