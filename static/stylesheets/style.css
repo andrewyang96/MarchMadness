@@ -1,13 +1,13 @@
 body
 {
-	background-image:url('./images/background.jpg');
+	background-image:url('../images/background.jpg');
 	background-repeat:repeat;
 	background-color:#d7d7d7;	
 	background-size: 100% 100%;
 }
 
 #bgNav{
-	background-image:url('./images/bg2.png');
+	background-image:url('../images/bg2.png');
 	background-repeat:repeat;
 	margin: 0px auto 0px auto;
 	padding: 50px 0 50px 0;

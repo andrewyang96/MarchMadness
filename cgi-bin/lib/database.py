@@ -71,7 +71,7 @@ def generate(uniqueID=None):
         bitstring = None
     determineWinners(b, bitstring)
 
-    f = open("./templates/bracket.html")
+    f = open("../templates/bracket.html")
     page = lxml.html.fromstring(f.read())
     f.close()
 
