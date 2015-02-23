@@ -7,20 +7,21 @@ import os
 import lxml.html
 import MySQLdb
 
+TABLE = "bracketo_marchmadness"
 
 def connect():
     return MySQLdb.connect(host="engr-cpanel-mysql.engr.illinois.edu",
-                           user="ayang14_ncaa",
-                           passwd="roflcopter1",
-                           db="ayang14_marchmadness")
+                           user="bracketo_client",
+                           passwd="M@rchM@dn355",
+                           db="bracketo_marchmadness")
 
 
 def insert(timestamp, uniqueID, binary):
     db = connect()
     cur = db.cursor()
-    command = ("INSERT INTO ayang14_marchmadness.Bracket "
+    command = ("INSERT INTO {0}.Bracket "
                "(timestamp, id, bitstring) "
-               "VALUES (\"{0}\",\"{1}\",{2})".format(timestamp, uniqueID, binary))
+               "VALUES (\"{1}\",\"{2}\",{3})".format(TABLE, timestamp, uniqueID, binary))
     try:
         cur.execute(command)
         db.commit()
@@ -36,8 +37,8 @@ def select(uniqueID):
     # returns tuple: (timestamp, binary)
     db = connect()
     cur = db.cursor()
-    command = ("SELECT timestamp, bitstring FROM ayang14_marchmadness.Bracket "
-               "WHERE id=\"{0}\"".format(uniqueID))
+    command = ("SELECT timestamp, bitstring FROM {0}.Bracket "
+               "WHERE id=\"{1}\"".format(TABLE, uniqueID))
     cur.execute(command)
     rows = cur.fetchall()
     db.close()
