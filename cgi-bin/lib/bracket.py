@@ -170,14 +170,14 @@ def alpha(team1, team2, rndnum):
     try:
         minSeed, maxSeed = sorted([int(team1.getSeed()), int(team2.getSeed())])
         a = alphas[(minSeed, maxSeed)]
-        print "Found alpha for {0}, {1}. It's {2}".format(minSeed, maxSeed, a)
+        # print "Found alpha for {0}, {1}. It's {2}".format(minSeed, maxSeed, a)
         return a
     except KeyError:        
         try:
-            print "Using default alpha for round {0}".format(rndnum)
+            # print "Using default alpha for round {0}".format(rndnum)
             return defaults[rndnum]
         except KeyError:
-            print "Cannot find an alpha or default value for {0}, {1} in round {2}".format(minSeed, maxSeed, rndnum)
+            # print "Cannot find an alpha or default value for {0}, {1} in round {2}".format(minSeed, maxSeed, rndnum)
             return 1
 
 # RUN THROUGH BRACKET
