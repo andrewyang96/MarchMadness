@@ -23,5 +23,5 @@ def getDefaultAlphas():
             l = line.split(",")
             l[:] = [float(s) for s in l]
             l[0] = int(l[0])
-            defaults[l[0]) = l[1]
+            defaults[l[0]] = l[1]
     return defaults
