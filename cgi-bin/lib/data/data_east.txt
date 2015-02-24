@@ -1,16 +1,16 @@
-1,Virginia
-16,Coast Car.
-8,Memphis
-9,G Washington
-5,Cincinnati
-12,Harvard
-4,Mich. State
-13,Delaware
-6,N Carolina
-11,Providence
-3,Iowa State
-14,NC Central
-7,Connecticut
-10,St. Joseph's
-2,Villanova
-15,Milwaukee
+1,East 1
+16,East 16
+8,East 8
+9,East 9
+5,East 5
+12,East 12
+4,East 4
+13,East 13
+6,East 6
+11,East 11
+3,East 3
+14,East 14
+7,East 7
+10,East 10
+2,East 2
+15,East 15

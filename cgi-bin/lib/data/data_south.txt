@@ -1,16 +1,16 @@
-1,Florida
-16,Albany
-8,Colorado
-9,Pittsburgh
-5,VCU
-12,SF Austin
-4,UCLA
-13,Tulsa
-6,Ohio State
-11,Dayton
-3,Syracuse
-14,W Michigan
-7,New Mexico
-10,Stanford
-2,Kansas
-15,E Kentucky
+1,South 1
+16,South 16
+8,South 8
+9,South 9
+5,South 5
+12,South 12
+4,South 4
+13,South 13
+6,South 6
+11,South 11
+3,South 3
+14,South 14
+7,South 7
+10,South 10
+2,South 2
+15,South 15

@@ -1,16 +1,16 @@
-1,Arizona
-16,Weber State
-8,Gonzaga
-9,Oklahoma St
-5,Oklahoma
-12,N Dakota St
-4,San Diego St
-13,N Mexico St
-6,Baylor
-11,Nebraska
-3,Creighton
-14,LA-Lafayette
-7,Oregon
-10,BYU
-2,Wisconsin
-15,American U
+1,West 1
+16,West 16
+8,West 8
+9,West 9
+5,West 5
+12,West 12
+4,West 4
+13,West 13
+6,West 6
+11,West 11
+3,West 3
+14,West 14
+7,West 7
+10,West 10
+2,West 2
+15,West 15
