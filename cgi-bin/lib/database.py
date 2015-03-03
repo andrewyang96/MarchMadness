@@ -135,3 +135,32 @@ def generate(uniqueID=None):
         debug.cssselect("#link")[0].cssselect("a")[0].text = "Generate another bracket"
         page.cssselect("#refreshmessage")[0].cssselect("a")[0].text = "Click here for another bracket."
     return lxml.html.tostring(page, pretty_print=True)
+
+import json
+
+def generateJSON(uniqueID=None):
+    # returns an HTML string
+
+    mustGenerateNewBracket = uniqueID is None
+    teams = getTeams()
+    b = Bracket(teams)
+    if mustGenerateNewBracket:
+        bitstring = None
+        determineWinners(b, bitstring)
+        bitstring = bin(b.getBitRepresentation())[2:] # eliminate leading 0b
+        timestamp = getTimestamp()
+        success = False
+        while not success:
+            try:
+                uniqueID = getUniqueID()
+                insert(timestamp, uniqueID, bitstring)
+                success = True
+            except MySQLdb.Error as e:
+                if e[0] != 1062:  # error code 1062: duplicate ID
+                    raise e
+    else:
+        timestamp, bitstring = select(uniqueID)
+        timestamp = timestamp.strftime('%Y-%m-%d %H:%M:%S')
+
+    teamslist = [[region[team].getJSON() for team in region] for region in teams]
+    return json.dumps({"bitstring": bitstring, "timestamp": timestamp, "uniqueID": uniqueID, "teams": teamslist})

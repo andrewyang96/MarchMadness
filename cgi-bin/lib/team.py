@@ -16,7 +16,8 @@ class Team(object):
 ##        return self.region
     def getName(self):
         return self.name
-
+    def getJSON(self):
+        return {"seed" : self.seed, "name" : self.name}
     def __str__(self):
         if self.name == None:
             return str(self.seed) # + " from region " + str(self.region)
