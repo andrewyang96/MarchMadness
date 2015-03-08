@@ -162,6 +162,6 @@ def generateJSON(uniqueID=None):
         timestamp, bitstring = select(uniqueID)
         timestamp = timestamp.strftime('%Y-%m-%d %H:%M:%S')
     
-    teamslist = [[[region[str(seed)].getJSON() for seed in matchup] for matchup in pairwise(matchorder)] for region in teams]
-    # teamslist = [[region[team].getJSON() for team in region] for region in teams]
-    return json.dumps({"bitstring": bitstring, "timestamp": timestamp, "uniqueID": uniqueID, "teams": teamslist})
+    # teamslist = [[[region[str(seed)].getJSON() for seed in matchup] for matchup in pairwise(matchorder)] for region in teams]
+    matcheslist = [[[team.getJSON() for team in match.getTeams()] for match in rnd] for rnd in b.getMatches()]
+    return json.dumps({"bitstring": bitstring, "timestamp": timestamp, "uniqueID": uniqueID, "matches": matcheslist, "isNew": mustGenerateNewBracket})
