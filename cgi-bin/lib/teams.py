@@ -8,10 +8,10 @@ from team import Team
 import os
 path = os.path.dirname(os.path.realpath(__file__)) + "/"
 # order may change
-files = [path+"data/data_south.txt",
-         path+"data/data_east.txt",
-         path+"data/data_midwest.txt",
-         path+"data/data_west.txt"]
+files = [path+"data/data_midwest.txt",
+         path+"data/data_west.txt",
+         path+"data/data_south.txt",
+         path+"data/data_east.txt"]
 
 # data files are csv of teams
 # Specifications:

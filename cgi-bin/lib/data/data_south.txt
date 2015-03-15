@@ -1,16 +1,16 @@
-1,South 1
-16,South 16
-8,South 8
-9,South 9
-5,South 5
-12,South 12
-4,South 4
-13,South 13
-6,South 6
-11,South 11
-3,South 3
-14,South 14
-7,South 7
-10,South 10
-2,South 2
-15,South 15
+1,Duke
+16,Winner G3
+8,San Diego St
+9,St. John's
+5,Utah
+12,SF Austin
+4,Georgetown
+13,E Wash.
+6,SMU
+11,UCLA
+3,Iowa St
+14,UAB
+7,Iowa
+10,Davidson
+2,Gonzaga
+15,N Dakota St

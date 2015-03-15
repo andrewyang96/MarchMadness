@@ -1,16 +1,16 @@
-1,West 1
-16,West 16
-8,West 8
-9,West 9
-5,West 5
-12,West 12
-4,West 4
-13,West 13
-6,West 6
-11,West 11
-3,West 3
-14,West 14
-7,West 7
-10,West 10
-2,West 2
-15,West 15
+1,Wisconsin
+16,Coast Car.
+8,Oregon
+9,Oklahoma St
+5,Arkansas
+12,Wofford
+4,UNC
+13,Harvard
+6,Xavier
+11,Winner G4
+3,Baylor
+14,Georgia St
+7,VCU
+10,Ohio St
+2,Arizona
+15,Texas SO

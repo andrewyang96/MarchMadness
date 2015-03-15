@@ -1,16 +1,16 @@
-1,East 1
-16,East 16
-8,East 8
-9,East 9
-5,East 5
-12,East 12
-4,East 4
-13,East 13
-6,East 6
-11,East 11
-3,East 3
-14,East 14
-7,East 7
-10,East 10
-2,East 2
-15,East 15
+1,Villanova
+16,Lafayette
+8,NC State
+9,LSU
+5,Northern Iowa
+12,Wyoming
+4,Louisville
+13,UC Irvine
+6,Providence
+11,Winner G2
+3,Oklahoma
+14,Albany
+7,Michigan St
+10,Georgia
+2,Virginia
+15,Belmont

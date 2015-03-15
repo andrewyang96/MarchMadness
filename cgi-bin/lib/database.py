@@ -161,6 +161,7 @@ def generateJSON(uniqueID=None):
     else:
         timestamp, bitstring = select(uniqueID)
         timestamp = timestamp.strftime('%Y-%m-%d %H:%M:%S')
+        determineWinners(b, bitstring)
     
     # teamslist = [[[region[str(seed)].getJSON() for seed in matchup] for matchup in pairwise(matchorder)] for region in teams]
     matcheslist = [[[team.getJSON() for team in match.getTeams()] for match in rnd] for rnd in b.getMatches()]
