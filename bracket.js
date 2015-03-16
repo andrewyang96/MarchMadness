@@ -38,10 +38,10 @@ var modifyDOM = function (data) {
 	$("#champion .seed").html(champion['seed']);
 	
 	// HARDCODED: SUBJECT TO CHANGE!
-	$("#first-region").html("SOUTH");
-	$("#second-region").html("EAST");
-	$("#third-region").html("MIDWEST");
-	$("#fourth-region").html("WEST");
+	$("#first-region").html("MIDWEST");
+	$("#second-region").html("WEST");
+	$("#third-region").html("SOUTH");
+	$("#fourth-region").html("EAST");
 	
 	// modify debug DOM
 	$(".debug #time").html("This bracket was generated on " + data['timestamp'] + " UTC");
@@ -54,6 +54,8 @@ var modifyDOM = function (data) {
 		$("#refreshmessage a").html("Click here for another bracket");
 	}
 	
+	// tweet button
+	$("iframe").attr("src", $("iframe").attr("src") + "%3Fid%3D" + data['uniqueID']);
 };
 
 $(document).ready(function () {
