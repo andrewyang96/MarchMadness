@@ -152,7 +152,17 @@ class Bracket(object):
 
 # PROBABILITY FUNCTIONS
 def win(team1, team2, rndnum):
-    if random.random() < winProb(team1, team2, rndnum):
+    a = alpha(team1, team2, rndnum) # For debugging
+    wp = winProb(team1, team2, rndnum)
+    r = random.random()
+    reg = "F"
+    if (team1.getRegion() == team2.getRegion()):
+        reg = team1.getRegion()
+    #print ("- [{0}] ({1: >2}) vs ({2: >2}) a={3:6.3f} wp={4:11.9f} r={5:11.9f}"
+    print ("{0},{6},{1: >2},{2: >2},{3:6.3f},{4:11.9f},{5:11.9f}"
+            .format(rndnum, team1.getSeed(), team2.getSeed(), a, wp, r, reg))
+    #if random.random() < winProb(team1, team2, rndnum):
+    if r < wp:
         return team1
     else:
         return team2

@@ -12,15 +12,18 @@ from teams import getTeams
 if __name__ == "__main__":
     import cProfile
     
-    print "March Madness 2014 Simulator"
-    print "\n"
+    #print "March Madness 2014 Simulator"
+    #print "\n"
 
     b = Bracket(getTeams())
-    cProfile.run("determineWinners(b)")
+    #cProfile.run("determineWinners(b)")
     # print timeit.timeit("determineWinners(b)", setup="from bracket import *")
-    # determineWinners(b)
+    #determineWinners(b)
 
-    print b
-    print bin(b.getBitRepresentation())
+    for i in range(0,1):
+        determineWinners(b)
+
+    #print b
+    #print bin(b.getBitRepresentation())
 
 # use str.format(html, *(args)) with {}

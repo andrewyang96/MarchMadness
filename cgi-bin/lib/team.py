@@ -2,18 +2,18 @@
 # -*- coding: UTF-8 -*-
 
 class Team(object):
-    def __init__(self, seed, name=None):
+    def __init__(self, seed, name=None, region=None):
         # seed - integer [1,16]
         # region - str, used for debugging
         # name - str
         self.seed = seed
-        # self.region = region
+        self.region = region
         self.name = name
 
     def getSeed(self):
         return self.seed
-##    def getRegion(self):
-##        return self.region
+    def getRegion(self):
+        return self.region
     def getName(self):
         return self.name
     def getJSON(self):
