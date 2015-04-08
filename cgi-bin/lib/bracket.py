@@ -1,9 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: UTF-8 -*-
 
+from teams import getTeams
 from alpha import getAlphaFile, getDefaultAlphas
 from itertools import izip
 import random, time, datetime, binascii, os
+
+PERFECTBITSTRING = "1000000000000011000001100000010000010010100011110000101110001101"
 
 # MATCH OBJECT: REPRESENTS ONE GAME BETWEEN TWO TEAMS
 class Match(object):
@@ -203,6 +206,26 @@ def determineWinners(bracket, bitstring=None):
                     match.setValue(match.getChild1().getValue())
                 bitpos += 1
             rndnum += 1
+
+def calculateScore(otherBracket):
+    perfectBracket = Bracket(getTeams())
+    determineWinners(perfectBracket, PERFECTBITSTRING)
+    value = 10
+    totalScore = 0
+    matches = otherBracket.getMatches()
+    # print "Perfect Bracket:\n" + perfectBracket.__str__()
+    # print "Your Bracket:\n" + otherBracket.__str__()
+    for rndindex, rnd in enumerate(perfectBracket.getMatches()):
+        for matchindex, match in enumerate(rnd):
+            perfectWinner = match.getWinner()
+            # print "Perfect has:", perfectWinner
+            winner = matches[rndindex][matchindex].getWinner()
+            # print "Yours has:", winner
+            if perfectWinner.getName() == winner.getName():
+                # print "Match!", value
+                totalScore += value
+        value *= 2
+    return totalScore
 
 def getTimestamp():
     return datetime.datetime.utcfromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S')
