@@ -46,13 +46,14 @@ var modifyDOM = function (data) {
 	// modify debug DOM
 	$(".debug #time").html("This bracket was generated on " + data['timestamp'] + " UTC");
 	var score = data['score'];
+	var gamesCorrect = data['gamesCorrect'];
 	if (data['isNew']) {
 		// $(".debug #link a").attr("href", "/cgi-bin/bracket.py?id=" + data['uniqueID']);
 		$(".debug #link").html("<a href='/bracket.html?id=" + data['uniqueID'] + "'>Permalink to generated bracket</a>");
-		$("#refreshmessage a").html("Your bracket would've scored " + score + " points. Refresh this page for another bracket");
+		$("#refreshmessage a").html("Your bracket would've scored " + score + " points and had " + gamesCorrect + " out of 63 games correct. Refresh this page for another bracket");
 	} else {
 		$(".debug #link").html("<a href='/bracket.html'>Generate another bracket</a>");
-		$("#refreshmessage a").html("Your bracket would've scored " + score + " points. Refresh this page for another bracket");
+		$("#refreshmessage a").html("Your bracket would've scored " + score + " points and had " + gamesCorrect + " out of 63 games correct. Refresh this page for another bracket");
 	}
 	
 	// tweet button
