@@ -212,11 +212,12 @@ def calculateScore(otherBracket):
     determineWinners(perfectBracket, PERFECTBITSTRING)
     value = 10
     totalScore = 0
-    gamesCorrect = 0
+    gamesCorrectList = []
     matches = otherBracket.getMatches()
     # print "Perfect Bracket:\n" + perfectBracket.__str__()
     # print "Your Bracket:\n" + otherBracket.__str__()
     for rndindex, rnd in enumerate(perfectBracket.getMatches()):
+        gamesCorrect = 0
         for matchindex, match in enumerate(rnd):
             perfectWinner = match.getWinner()
             # print "Perfect has:", perfectWinner
@@ -226,8 +227,9 @@ def calculateScore(otherBracket):
                 # print "Match!", value
                 totalScore += value
                 gamesCorrect += 1
+        gamesCorrectList.append(gamesCorrect)
         value *= 2
-    return (totalScore, gamesCorrect)
+    return (totalScore, gamesCorrectList)
 
 def getTimestamp():
     return datetime.datetime.utcfromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S')

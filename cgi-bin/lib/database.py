@@ -87,6 +87,7 @@ def generateJSON(uniqueID=None):
         determineWinners(b, bitstring)
 
     # calculate score
-    score, gamesCorrect = calculateScore(b)
+    score, gamesCorrectList = calculateScore(b)
     matcheslist = [[[team.getJSON() for team in match.getTeams()] for match in rnd] for rnd in b.getMatches()]
-    return json.dumps({"bitstring": bitstring, "timestamp": timestamp, "uniqueID": uniqueID, "matches": matcheslist, "isNew": mustGenerateNewBracket, "score": score, "gamesCorrect": gamesCorrect})
+    return json.dumps({"bitstring": bitstring, "timestamp": timestamp, "uniqueID": uniqueID, "matches": matcheslist, "isNew": mustGenerateNewBracket,
+                       "score": score, "gamesCorrect": sum(gamesCorrectList), "gamesCorrectList": gamesCorrectList})
